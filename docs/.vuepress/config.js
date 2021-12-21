@@ -10,6 +10,10 @@ module.exports = {
     theme: 'vdoing',
     themeConfig: {
         repo: 'mouse0w0/setup-mdk-guide',
+        docsDir: 'docs',
+        docsBranch: 'main',
+        editLinks: true,
+        editLinkText: '编辑此页面',
         nav,
         sidebar,
         sidebarDepth: 2,
