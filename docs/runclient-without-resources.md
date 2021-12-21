@@ -9,7 +9,7 @@ article: false
 :::
 
 ## 解决方案
-在`build.gradle`文件中添加如下代码：
+在`build.gradle`文件内容末尾添加以下代码：
 ```groovy
 sourceSets { 
     main { 
@@ -19,7 +19,7 @@ sourceSets {
 ```
 
 ::: details 其他解决方案
-在`build.gradle`文件中添加如下代码：
+在`build.gradle`文件内容末尾添加以下代码：
 ```groovy
 sourceSets {
 	main {
