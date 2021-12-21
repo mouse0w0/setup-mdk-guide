@@ -1,4 +1,4 @@
 module.exports = [
     { text: '首页', link: '/' },
-    { text: '爱发电', link: 'https://afdian.net/@mouse'}
+    { text: '捐助作者', link: 'https://afdian.net/@mouse'}
 ]
