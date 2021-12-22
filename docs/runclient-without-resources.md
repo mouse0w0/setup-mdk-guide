@@ -1,7 +1,7 @@
 ---
 article: false
 ---
-# 运行runClient时无法加载资源
+# 运行 runClient 时无法加载资源
 于ForgeGradle 3.+版本运行`runClient`时无法加载资源，表现为模组信息（`mcmod.info`文件）无法加载，或纹理贴图文件无法加载。但是运行`build`并将生成的模组安装到游戏中时，又能够正常地加载模组信息和纹理贴图文件。
 
 ::: details 查看图片
