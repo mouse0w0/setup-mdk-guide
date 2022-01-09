@@ -18,7 +18,18 @@ sourceSets {
 }
 ```
 
-::: details 其他解决方案
+::: details 其他解决方案①
+在`build.gradle`文件内容末尾添加以下代码：
+```groovy
+sourceSets { 
+    main { 
+        output.resourcesDir = java.outputDir
+    } 
+}
+```
+:::
+
+::: details 其他解决方案②
 在`build.gradle`文件内容末尾添加以下代码：
 ```groovy
 sourceSets {
