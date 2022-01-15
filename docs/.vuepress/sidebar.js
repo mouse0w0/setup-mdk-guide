@@ -7,7 +7,8 @@ module.exports = [
             ['/unmappable-character', '编码GBK的不可映射字符'],
             ['/unsupported-diamond-operator', '不支持 diamond 运算符'],
             ['/not-found-command-gradlew', '找不到命令 gradlew'],
-            ['/not-found-task-setupdecompworkspace', '找不到任务 setupDecompWorkspace']
+            ['/not-found-task-setupdecompworkspace', '找不到任务 setupDecompWorkspace'],
+            ['/pkix-path-building-failed', 'PKIX 路径构建失败']
         ]
     }
 ]
