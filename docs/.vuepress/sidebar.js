@@ -12,7 +12,8 @@ module.exports = [
             ['/invalid-assetdirectory', '环境变量\'assetDirectory\'必须为有效路径'],
             ['/could-not-find-net-minecraft-client', '无法找到 net.minecraft:client'],
             ['/projectscopeservice-has-been-closed', 'ProjectScopeService 已被关闭'],
-            ['/path-get-file-name-is-null', 'Path.getFileName() 为空']
+            ['/path-get-file-name-is-null', 'Path.getFileName() 为空'],
+            ['/could-not-download-fastutil-jar', '无法下载 fastutil.jar']
         ]
     }
 ]
