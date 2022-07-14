@@ -19,20 +19,22 @@ A problem occurred configuring root project '*******'.
 ## 解决方案
 使用国内Maven镜像来加速`fastutil.jar`文件的下载，本解决方案使用的是[阿里云Maven镜像](https://developer.aliyun.com/mvn/guide)。
 
-在`build.gradle`文件中添加以下内容：
+在`build.gradle`文件中按提示添加内容：
 ```groovy
 buildscript {
-    repositories {
-        maven { url 'https://maven.aliyun.com/repository/public' } // 仅添加这一行
-        // 其它代码请勿修改……
+    repositories { // 在这个大括号内添加
+        maven { url 'https://maven.aliyun.com/repository/public' } // <<<添加这一行
+        maven { url = 'https://maven.minecraftforge.net' } // 在这行上面添加
+        // 其它代码请勿修改
     }
-    // 其它代码请勿修改……
+    // 其它代码请勿修改
 }
 
-repositories {
-    maven { url 'https://maven.aliyun.com/repository/public' } // 仅添加这一行
+repositories { // 在这个大括号内添加
+    maven { url 'https://maven.aliyun.com/repository/public' } // <<<添加这一行
+    // 其它代码请勿修改
 }
-// 其它代码请勿修改……
+// 其它代码请勿修改
 ```
 
 修改完毕后不一定能够立刻生效，在开发环境目录下打开**CMD命令提示符**，并运行如下命令清理Gradle进程：
