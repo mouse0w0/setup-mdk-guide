@@ -8,7 +8,9 @@ java.lang.IllegalStateException: ProjectScopeService has been closed.
 ```
 
 ## 解决方案
-在当前目录下打开**CMD命令提示符**，并运行如下命令：
-```cmd
-gradlew --stop
-```
+先退出 Eclipse 或 IntelliJ IDEA 等软件；  
+然后打开任务管理器，在「详细信息」选项卡中找到进程「java.exe」并结束任务
+
+::: details 查看图片  
+![](./projectscopeservice-has-been-closed/1.png)  
+:::
