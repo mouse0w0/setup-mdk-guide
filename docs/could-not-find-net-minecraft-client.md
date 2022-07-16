@@ -24,6 +24,19 @@ A problem occurred configuring root project 'forge-1.16.5-36.2.0-mdk'.
 :::
 
 ## 解决方案
-这是由于Forge缓存的Minecraft版本清单（`manifest.json`）文件格式错误。删除所有`C:\Users\<当前用户>\.gradle\caches\forge_gradle\minecraft_repo\versions\`和`C:\Users\<当前用户>\.gradle\caches\forge_gradle\mcp_repo\versions\`文件夹内文件名包含`manifest.json`文件，连接网络重新配置环境即可解决。
+这是由于Forge缓存的Minecraft版本清单（`manifest.json`）文件格式错误。
+
+找到以下两个文件夹：
+- `C:\Users\<当前用户>\.gradle\caches\forge_gradle\mcp_repo\versions\`
+- `C:\Users\<当前用户>\.gradle\caches\forge_gradle\minecraft_repo\versions\`
+
+并删除这两个文件夹内以下五个文件：
+- `manifest.json`
+- `manifest.json.etag`
+- `manifest.json.md5`
+- `manifest.json.sha1`
+- `manifest.json.sha256`
+
+然后连接网络重新配置环境即可解决。
 
 ![](./could-not-find-net-minecraft-client/2.png)

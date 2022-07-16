@@ -41,3 +41,7 @@ repositories { // 在这个大括号内添加
 ```cmd
 gradlew --stop
 ```
+
+::: details 其他解决方案
+[Minecraft Forge 构建开发环境网络代理配置教程](https://zekerzhayard.gitbook.io/minecraft-forge-gou-jian-kai-fa-huan-jing-wang-luo-dai-li-pei-zhi-jiao-cheng/)
+:::
