@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>运行游戏时FML导致崩溃 | 配置MDK指南</title>
+    <meta name="generator" content="VuePress 1.8.3">
+    
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/setup-mdk-guide/assets/css/0.styles.eb7c6779.css" as="style"><link rel="preload" href="/setup-mdk-guide/assets/js/app.2fa3c6b5.js" as="script"><link rel="preload" href="/setup-mdk-guide/assets/js/2.bf99f258.js" as="script"><link rel="preload" href="/setup-mdk-guide/assets/js/17.13abdcbd.js" as="script"><link rel="prefetch" href="/setup-mdk-guide/assets/js/10.2dc40c41.js"><link rel="prefetch" href="/setup-mdk-guide/assets/js/11.39a11240.js"><link rel="prefetch" href="/setup-mdk-guide/assets/js/12.08a8219c.js"><link rel="prefetch" href="/setup-mdk-guide/assets/js/13.49fa7a43.js"><link rel="prefetch" href="/setup-mdk-guide/assets/js/14.3ee5569a.js"><link rel="prefetch" href="/setup-mdk-guide/assets/js/15.d37f9aa0.js"><link rel="prefetch" href="/setup-mdk-guide/assets/js/16.9215d943.js"><link rel="prefetch" href="/setup-mdk-guide/assets/js/3.7176efa3.js"><link rel="prefetch" href="/setup-mdk-guide/assets/js/4.7444aba3.js"><link rel="prefetch" href="/setup-mdk-guide/assets/js/5.2201ce1f.js"><link rel="prefetch" href="/setup-mdk-guide/assets/js/6.5ed7e925.js"><link rel="prefetch" href="/setup-mdk-guide/assets/js/7.709ad7aa.js"><link rel="prefetch" href="/setup-mdk-guide/assets/js/8.4564e01d.js"><link rel="prefetch" href="/setup-mdk-guide/assets/js/9.d296b394.js">
+    <link rel="stylesheet" href="/setup-mdk-guide/assets/css/0.styles.eb7c6779.css">
+  </head>
+  <body class="theme-mode-light">
+    <div id="app" data-server-rendered="true"><div class="theme-container sidebar-open"><header class="navbar blur"><div title="目录" class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/setup-mdk-guide/" class="home-link router-link-active"><!----> <span class="site-name">配置MDK指南</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/setup-mdk-guide/" class="nav-link">首页</a></div><div class="nav-item"><a href="https://afdian.net/@mouse" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  捐助作者
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <a href="https://github.com/mouse0w0/setup-mdk-guide" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar-hover-trigger"></div> <aside class="sidebar" style="display:none;"><!----> <nav class="nav-links"><div class="nav-item"><a href="/setup-mdk-guide/" class="nav-link">首页</a></div><div class="nav-item"><a href="https://afdian.net/@mouse" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  捐助作者
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <a href="https://github.com/mouse0w0/setup-mdk-guide" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><a href="/setup-mdk-guide/" aria-current="page" class="sidebar-link">首页</a></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>常见问题</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/setup-mdk-guide/runclient-without-resources.html" class="sidebar-link">运行 runClient 时无法加载资源</a></li><li><a href="/setup-mdk-guide/fml-crash.html" aria-current="page" class="active sidebar-link">运行游戏时FML导致崩溃</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/setup-mdk-guide/fml-crash.html#解决方案" class="sidebar-link">解决方案</a></li><li class="sidebar-sub-header"><a href="/setup-mdk-guide/fml-crash.html#参考资料" class="sidebar-link">参考资料</a></li></ul></li><li><a href="/setup-mdk-guide/unmappable-character.html" class="sidebar-link">编码GBK的不可映射字符</a></li><li><a href="/setup-mdk-guide/unsupported-diamond-operator.html" class="sidebar-link">不支持 diamond 运算符</a></li><li><a href="/setup-mdk-guide/not-found-command-gradlew.html" class="sidebar-link">找不到命令 gradlew</a></li><li><a href="/setup-mdk-guide/not-found-task-setupdecompworkspace.html" class="sidebar-link">找不到任务 setupDecompWorkspace</a></li><li><a href="/setup-mdk-guide/pkix-path-building-failed.html" class="sidebar-link">PKIX 路径构建失败</a></li><li><a href="/setup-mdk-guide/invalid-assetdirectory.html" class="sidebar-link">环境变量'assetDirectory'必须为有效路径</a></li><li><a href="/setup-mdk-guide/could-not-find-net-minecraft-client.html" class="sidebar-link">无法找到 net.minecraft:client</a></li><li><a href="/setup-mdk-guide/projectscopeservice-has-been-closed.html" class="sidebar-link">ProjectScopeService 已被关闭</a></li><li><a href="/setup-mdk-guide/path-get-file-name-is-null.html" class="sidebar-link">Path.getFileName() 为空</a></li><li><a href="/setup-mdk-guide/could-not-download-fastutil-jar.html" class="sidebar-link">无法下载 fastutil.jar</a></li></ul></section></li></ul> </aside> <div><main class="page"><div class="theme-vdoing-wrapper "><!----> <!----> <div class="content-wrapper"><!----> <h1><!---->
+          运行游戏时FML导致崩溃
+        </h1> <!----> <div class="theme-vdoing-content content__default"><h1 id="运行游戏时fml导致崩溃"><a href="#运行游戏时fml导致崩溃" class="header-anchor">#</a> 运行游戏时FML导致崩溃</h1> <p>于ForgeGradle 3.+版本（Forge 1.12.2-14.23.5.2854及以上版本）运行游戏时崩溃，日志提示：<code>Caught exception from Forge Mod Loader (FML)</code>。</p> <details class="custom-block details"><summary>详细崩溃报告</summary> <div class="language- line-numbers-mode"><pre class="language-text"><code>net.minecraftforge.fml.common.LoaderExceptionModCrash: Caught exception from Forge Mod Loader (FML)
+Caused by: java.lang.NullPointerException
+	at net.minecraftforge.fml.common.network.NetworkRegistry.newChannel(NetworkRegistry.java:207)
+	at net.minecraftforge.fml.common.network.internal.FMLNetworkHandler.registerChannel(FMLNetworkHandler.java:185)
+	at net.minecraftforge.fml.common.FMLContainer.modConstruction(FMLContainer.java:92)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.google.common.eventbus.Subscriber.invokeSubscriberMethod(Subscriber.java:91)
+	at com.google.common.eventbus.Subscriber$SynchronizedSubscriber.invokeSubscriberMethod(Subscriber.java:150)
+	at com.google.common.eventbus.Subscriber$1.run(Subscriber.java:76)
+	at com.google.common.util.concurrent.MoreExecutors$DirectExecutor.execute(MoreExecutors.java:399)
+	at com.google.common.eventbus.Subscriber.dispatchEvent(Subscriber.java:71)
+	at com.google.common.eventbus.Dispatcher$PerThreadQueuedDispatcher.dispatch(Dispatcher.java:116)
+	at com.google.common.eventbus.EventBus.post(EventBus.java:217)
+	at net.minecraftforge.fml.common.LoadController.sendEventToModContainer(LoadController.java:219)
+	at net.minecraftforge.fml.common.LoadController.propogateStateMessage(LoadController.java:197)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.google.common.eventbus.Subscriber.invokeSubscriberMethod(Subscriber.java:91)
+	at com.google.common.eventbus.Subscriber$SynchronizedSubscriber.invokeSubscriberMethod(Subscriber.java:150)
+	at com.google.common.eventbus.Subscriber$1.run(Subscriber.java:76)
+	at com.google.common.util.concurrent.MoreExecutors$DirectExecutor.execute(MoreExecutors.java:399)
+	at com.google.common.eventbus.Subscriber.dispatchEvent(Subscriber.java:71)
+	at com.google.common.eventbus.Dispatcher$PerThreadQueuedDispatcher.dispatch(Dispatcher.java:116)
+	at com.google.common.eventbus.EventBus.post(EventBus.java:217)
+	at net.minecraftforge.fml.common.LoadController.distributeStateMessage(LoadController.java:136)
+	at net.minecraftforge.fml.common.Loader.loadMods(Loader.java:595)
+	at net.minecraftforge.fml.client.FMLClientHandler.beginMinecraftLoading(FMLClientHandler.java:232)
+	at net.minecraft.client.Minecraft.init(Minecraft.java:467)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:378)
+	at net.minecraft.client.main.Main.main(SourceFile:123)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraftforge.legacydev.Main.start(Main.java:86)
+	at net.minecraftforge.legacydev.MainClient.main(MainClient.java:29)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br></div></div></details> <h2 id="解决方案"><a href="#解决方案" class="header-anchor">#</a> 解决方案</h2> <p>在<code>build.gradle</code>文件的<code>dependencies</code>块中添加以下代码：</p> <div class="language-groovy line-numbers-mode"><pre class="language-groovy"><code>dependencies <span class="token punctuation">{</span>
+    <span class="token comment">// 添加以下代码强制使用旧版本mergetool</span>
+    implementation <span class="token punctuation">(</span><span class="token string gstring">&quot;net.minecraftforge:mergetool:0.2.3.3&quot;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> force <span class="token operator">=</span> <span class="token boolean">true</span> <span class="token punctuation">}</span>
+
+    <span class="token comment">// 其它依赖...</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><h2 id="参考资料"><a href="#参考资料" class="header-anchor">#</a> 参考资料</h2> <ul><li><a href="https://stackoverflow.com/questions/68377027/minecraft-forge-mod-loader-fml-loading-and-crashing-mc" target="_blank" rel="noopener noreferrer">Minecraft Forge Mod Loader (FML) Loading and crashing MC<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----> <div class="page-edit"><div class="edit-link"><a href="https://github.com/mouse0w0/setup-mdk-guide/edit/main/docs/fml-crash.md" target="_blank" rel="noopener noreferrer">编辑此页面</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <!----> <!----></div> <div class="page-nav-wapper"><div class="page-nav-centre-wrap"><a href="/setup-mdk-guide/runclient-without-resources.html" class="page-nav-centre page-nav-centre-prev"><div class="tooltip">运行 runClient 时无法加载资源</div></a> <a href="/setup-mdk-guide/unmappable-character.html" class="page-nav-centre page-nav-centre-next"><div class="tooltip">编码GBK的不可映射字符</div></a></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/setup-mdk-guide/runclient-without-resources.html" class="prev">运行 runClient 时无法加载资源</a></span> <span class="next"><a href="/setup-mdk-guide/unmappable-character.html">编码GBK的不可映射字符</a>→
+      </span></p></div></div></div> <!----></main></div> <div class="footer"><!----> 
+  Theme by
+  <a href="https://github.com/xugaoyi/vuepress-theme-vdoing" target="_blank" title="本站主题">Vdoing</a> <!----></div> <div class="buttons"><div title="返回顶部" class="button blur go-to-top iconfont icon-fanhuidingbu" style="display:none;"></div> <div title="去评论" class="button blur go-to-comment iconfont icon-pinglun" style="display:none;"></div> <div title="主题模式" class="button blur theme-mode-but iconfont icon-zhuti"><ul class="select-box" style="display:none;"><li class="iconfont icon-zidong">
+          跟随系统
+        </li><li class="iconfont icon-rijianmoshi">
+          浅色模式
+        </li><li class="iconfont icon-yejianmoshi">
+          深色模式
+        </li><li class="iconfont icon-yuedu">
+          阅读模式
+        </li></ul></div></div> <!----> <!----> <!----></div><div class="global-ui"></div></div>
+    <script src="/setup-mdk-guide/assets/js/app.2fa3c6b5.js" defer></script><script src="/setup-mdk-guide/assets/js/2.bf99f258.js" defer></script><script src="/setup-mdk-guide/assets/js/17.13abdcbd.js" defer></script>
+  </body>
+</html>
