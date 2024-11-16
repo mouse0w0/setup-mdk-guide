@@ -67,5 +67,15 @@ dependencies {
 }
 ```
 
+如果上述方法无法修复，则可能是类路径中包的加载顺序问题，尝试使用`fg.deobf`提前`mergetool`的加载顺序：
+```groovy
+dependencies {
+    // 添加以下代码强制使用旧版本mergetool
+    implementation fg.deobf("net.minecraftforge:mergetool:0.2.3.3:forge") { force = true }
+
+    // 其它依赖...
+}
+```
+
 ## 参考资料
 - [Minecraft Forge Mod Loader (FML) Loading and crashing MC](https://stackoverflow.com/questions/68377027/minecraft-forge-mod-loader-fml-loading-and-crashing-mc)
