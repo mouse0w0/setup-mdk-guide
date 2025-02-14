@@ -67,6 +67,8 @@ dependencies {
 }
 ```
 
+随后删除`C:\Users\<当前用户>\.gradle\caches\forge_gradle\minecraft_user_repo\net\minecraftforge\forge\1.12.2-14.23.5.xxxx_mapped_snapshot_xxxxxxxx-1.12`或正在使用的Forge版本的文件夹，重新同步Gradle后修复。
+
 如果上述方法无法修复，则可能是类路径中包的加载顺序问题，尝试使用`fg.deobf`提前`mergetool`的加载顺序：
 ```groovy
 dependencies {
